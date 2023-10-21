@@ -57,7 +57,7 @@ void loop() {
   u8g2.print("Temperatur: " + String(temperature_int) + "°C");
   //u8g2.drawStr(0, c_screen_height * 0.33, "Luftfeuchtigkeit: ");
   u8g2.setCursor(0, c_screen_height * 0.33);
-  u8g2.print("Luftfeuchtigkeit: " + String(humidty_int) + "%%");
+  u8g2.print("Luftfeuchtigkeit: " + String(humidty_int) + "%");
   u8g2.drawStr(0, c_screen_height * 0.66, "Aussentemperatur: ");
   u8g2.sendBuffer();
 
