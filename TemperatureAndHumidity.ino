@@ -40,24 +40,24 @@ void loop() {
     return;
   }
 
-  temperature = round(temperature);
-  humidty = round(humidty);
-
   Serial.println();
-  Serial.printf("Temp %f", temperature);
+  Serial.printf("Temp %.0f", temperature);
   Serial.print("°C \n");
-  Serial.printf("Humidity %f", humidty);
+  Serial.printf("Humidity %.0f", humidty);
   Serial.printf("%%");
   Serial.println();
+
+  int temperature_int = round(temperature);
+  int humidty_int = round(humidty);
 
   u8g2.clearBuffer();
   u8g2_prepare();
   //u8g2.drawStr(0, 0, "Temperatur: ");
   u8g2.setCursor(0, 0);
-  u8g2.print("Temperatur: " + String(temperature) + "°C");
+  u8g2.print("Temperatur: " + String(temperature_int) + "°C");
   //u8g2.drawStr(0, c_screen_height * 0.33, "Luftfeuchtigkeit: ");
   u8g2.setCursor(0, c_screen_height * 0.33);
-  u8g2.print("Luftfeuchtigkeit: " + String(humidty) + "%%");
+  u8g2.print("Luftfeuchtigkeit: " + String(humidty_int) + "%%");
   u8g2.drawStr(0, c_screen_height * 0.66, "Aussentemperatur: ");
   u8g2.sendBuffer();
 
