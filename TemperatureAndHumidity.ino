@@ -2,9 +2,6 @@
 #include <U8g2lib.h>
 #include <SPI.h>
 #include <Wire.h>
-#include "tinyTimeR.hpp"
-
-static tinyTimeR tt;
 
 const int cScreenWidth = 128;    // OLED display width, in pixels
 const int cScreenHeight = 32;    // OLED display height, in pixels
